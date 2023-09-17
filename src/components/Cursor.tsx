@@ -73,9 +73,9 @@ const Cursor = () => {
 
   return (
     <div
-      className={`hidden lg:grid place-items-center fixed h-6 w-6 border border-muted-foreground z-[999] rounded-full pointer-events-none transition-all ease-out duration-300 overflow-hidden ${
+      className={`hidden lg:grid place-items-center fixed border border-muted-foreground z-[999] rounded-full pointer-events-none transition-all ease-out duration-300 overflow-hidden ${
         scale && "animate-scale"
-      } ${hide && "scale-0"} ${hover && "w-40 h-40"}`}
+      } ${hide && "scale-0"} ${hover ? "w-40 h-40" : "h-6 w-6"}`}
       style={{
         top: +pos.y - (hover ? 80 : 10),
         left: +pos.x - (hover ? 80 : 10),
@@ -83,8 +83,8 @@ const Cursor = () => {
     >
       <div
         className={`${
-          !hover && "h-0 w-0 opacity-0"
-        } bg-foreground/80 text-background rounded-full h-32 w-32 grid place-items-center transition-all ease-in-out`}
+          !hover ? "h-0 w-0 opacity-0" : "h-32 w-32"
+        } bg-foreground/80 text-background rounded-full grid place-items-center transition-all ease-in-out`}
       >
         <ArrowUpRight size={50} />
       </div>
