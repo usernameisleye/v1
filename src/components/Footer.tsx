@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-4 border-t border-border h-20 text-muted-foreground w-full">
+      <div className="flex flex-col-reverse items-center justify-evenly  border-t border-border h-20 text-muted-foreground w-full md:flex-row md:justify-between">
         <small className="whitespace-nowrap">
           Adesida Leye | &copy; Copyright {new Date().getFullYear()}
         </small>
@@ -73,9 +73,7 @@ const Footer = () => {
             href="https://google.com/maps/search/Lagos, Nigeria"
             className="flex items-center gap-2 select-none hover:text-foreground"
           >
-            <span className="font-mono tracking-wider text-right">
-              Lagos, Nigeria
-            </span>
+            <span className="font-mono tracking-wider">Lagos, Nigeria</span>
             <Navigation size={15} />
           </TextLink>
         </div>

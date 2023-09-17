@@ -67,13 +67,7 @@ export const webProjects = [
       "MERN clone of Gmail website. Integrated CRUD request and mailing functionality to client side",
     link: "",
     gitHub: "https://github.com/usernameisleye/gmail-clone",
-    tools: [
-      "React",
-      "React Router",
-      "Tailwind CSS",
-      "NodeJS/Express",
-      "MongoDB",
-    ],
+    tools: ["React", "React Router", "NodeJS/Express", "MongoDB"],
   },
 ]
 

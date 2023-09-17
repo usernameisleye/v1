@@ -37,7 +37,7 @@ const Navbar = ({}) => {
           </div>
         </div>
 
-        <div className="flex justify-end items-center flex-wrap gap-4">
+        <div className="flex flex-col-reverse justify-center items-center gap-2 md:flex-row md:gap-4">
           <LinksMenu />
           <Theme />
         </div>
