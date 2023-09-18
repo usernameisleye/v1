@@ -43,9 +43,9 @@ function App() {
   return (
     <>
       <Preloader />
-      <main id="main-content" className="max-w-7xl mx-auto">
+      <main id="main-content" className="mx-auto max-w-7xl">
         <Navbar />
-        <div className="relative container">
+        <div className="container relative">
           <header className="my-16">
             <div>
               <Heading typeStyle="heading-4xl">
@@ -56,13 +56,13 @@ function App() {
               </Heading>
               <Paragraph
                 typeStyle="body-xl"
-                className="uppercase text-muted-foreground mt-2 md:mt-4"
+                className="mt-2 uppercase text-muted-foreground md:mt-4"
               >
                 Full Stack Developer
               </Paragraph>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            <div className="mt-8 flex gap-4">
               {links.map(({ href, Icon, text }) => (
                 <TextLink key={href} href={href}>
                   <Button
@@ -78,18 +78,18 @@ function App() {
             </div>
           </header>
 
-          <section className="relative w-full my-20">
+          <section className="relative my-20 w-full">
             <div className="mb-8">
               <Heading typeStyle="heading-3xl">Projects</Heading>
               <Paragraph
                 typeStyle="body-lg"
-                className="text-muted-foreground mt-4"
+                className="mt-4 text-muted-foreground"
               >
                 Here are some projects I've worked on
               </Paragraph>
             </div>
 
-            <div className="flex flex-col gap-8 w-auto md:gap-4">
+            <div className="flex w-auto flex-col gap-8 md:gap-4">
               {lists.map(({ name, list }, i) => (
                 <div key={name}>
                   <Heading className="uppercase">{name}</Heading>
@@ -109,7 +109,7 @@ function App() {
               <About />
               <div className="flex flex-col gap-6">
                 <div>
-                  <Heading className="uppercase mb-4">Technologies</Heading>
+                  <Heading className="mb-4 uppercase">Technologies</Heading>
                   <div className="flex flex-wrap items-center gap-4">
                     {technologies.map((text) => (
                       <Skill key={text} text={text} />
@@ -118,7 +118,7 @@ function App() {
                 </div>
 
                 <div>
-                  <Heading className="uppercase mb-4">Familiar With</Heading>
+                  <Heading className="mb-4 uppercase">Familiar With</Heading>
                   <div className="flex flex-wrap items-center gap-4">
                     {familiars.map((text) => (
                       <Skill key={text} text={text} />

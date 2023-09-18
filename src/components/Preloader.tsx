@@ -30,13 +30,13 @@ const Preloader = () => {
 
   return (
     <div
-      className={`fixed inset-0 bg-secondary flex items-end justify-end transition duration-200 ease-out ${
+      className={`fixed inset-0 flex items-end justify-end bg-secondary transition duration-200 ease-out ${
         visible
-          ? "transform opacity-100 z-[9999]"
-          : "transform opacity-0 -z-[9999]"
+          ? "z-[9999] transform opacity-100"
+          : "-z-[9999] transform opacity-0"
       }`}
     >
-      <div className="grid gap-3 text-5xl font-Grotesk p-8 text-right text-muted-foreground md:text-7xl">
+      <div className="grid gap-3 p-8 text-right font-Grotesk text-5xl text-muted-foreground md:text-7xl">
         <h2>{text}</h2>
         <h2>{`${progress}%`}</h2>
       </div>

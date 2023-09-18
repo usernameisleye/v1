@@ -22,14 +22,14 @@ const Navbar = ({}) => {
 
   return (
     <nav className="h-36 px-4 md:px-8">
-      <div className="flex items-center justify-between gap-x-4 h-full">
-        <div className="bg-muted text-muted-foreground border border-muted-foreground/20 py-4 px-6 rounded-full">
-          <div className="flex gap-6 select-none">
+      <div className="flex h-full items-center justify-between gap-x-4">
+        <div className="rounded-full border border-muted-foreground/20 bg-muted px-6 py-4 text-muted-foreground">
+          <div className="flex select-none gap-6">
             {pageLinks.map(({ id, title }, i) => (
               <a
                 key={i}
                 href={id}
-                className="relative transition-all w-max after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:opacity-80 after:transition-transform after:duration-500 after:ease-spring after:content-[''] after:bg-foreground hover:after:origin-bottom-left hover:after:scale-x-100 hover:text-foreground after:origin-right after:scale-x-0"
+                className="after:ease-spring relative w-max transition-all after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:origin-right after:scale-x-0 after:bg-foreground after:opacity-80 after:transition-transform after:duration-500 after:content-[''] hover:text-foreground hover:after:origin-bottom-left hover:after:scale-x-100"
               >
                 <span>{title}</span>
               </a>
@@ -37,7 +37,7 @@ const Navbar = ({}) => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse justify-center items-center gap-2 md:flex-row md:gap-4">
+        <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
           <LinksMenu />
           <Theme />
         </div>
@@ -69,14 +69,19 @@ const LinksMenu = () => {
   return (
     <Menubar className="h-auto p-0">
       <MenubarMenu>
-        <MenubarTrigger className="flex gap-2 cursor-pointer">
-          <Link2 size={15} />
-          <span>Links</span>
+        <MenubarTrigger className="cursor-pointer">
+          <div className="block py-1 md:hidden">
+            <Link2 />
+          </div>
+          <div className="hidden items-center gap-2 p-1 md:flex">
+            <Link2 size={15} />
+            <span>Links</span>
+          </div>
         </MenubarTrigger>
         <MenubarContent className="mx-2">
           {links.map(({ Icon, href, title }) => (
             <TextLink key={href} href={href}>
-              <MenubarItem className="flex gap-2 cursor-pointer">
+              <MenubarItem className="flex cursor-pointer gap-2">
                 <Icon className="w-6" />
                 {title}
               </MenubarItem>

@@ -6,7 +6,7 @@ export const Leye = ({ className }: { className?: string }) => {
       fill="none"
       viewBox="0 0 1903 1903"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("w-12 md:w-16 select-none", className)}
+      className={cn("w-12 select-none md:w-16", className)}
     >
       <g clipPath="url(#clip0_1361_1879)">
         <rect width="1903" height="1903" rx="900" fill="#D4D4D4" />
@@ -115,7 +115,7 @@ export const Alien = ({ className }: { className?: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className={cn("w-12 md:w-16 select-none", className)}
+      className={cn("w-12 select-none md:w-16", className)}
     >
       <rect width="72" height="72" fill="url(#pattern0)" />
       <defs>

@@ -6,8 +6,8 @@ interface SkillProps {
 
 const Skill: FC<SkillProps> = ({ text }) => {
   return (
-    <div className="py-2 px-8 w-fit rounded-full border border-border">
-      <span className="text-md text-muted-foreground truncate select-none">
+    <div className="w-fit rounded-full border border-border px-8 py-2">
+      <span className="text-md select-none truncate text-muted-foreground">
         {text}
       </span>
     </div>

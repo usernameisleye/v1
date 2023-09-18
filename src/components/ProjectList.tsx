@@ -2,7 +2,7 @@ import { ProjectType } from "@/types"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { FC } from "react"
 import "swiper/css"
-import { FreeMode, Navigation, Scrollbar } from "swiper/modules"
+import { FreeMode, Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Button, Project } from "."
 
@@ -37,10 +37,10 @@ const ProjectList: FC<ProjectListProps> = ({ projects, index }) => {
     <div>
       <Swiper
         className="mt-6"
+        enabled={true}
         spaceBetween={15}
         slidesPerView={1.2}
-        scrollbar={{ draggable: true }}
-        modules={[Navigation, Scrollbar, FreeMode]}
+        modules={[Navigation, FreeMode]}
         breakpoints={{
           640: { width: 640, slidesPerView: 2 },
           1200: { width: 1200, slidesPerView: 2.5 },
@@ -54,7 +54,7 @@ const ProjectList: FC<ProjectListProps> = ({ projects, index }) => {
         ))}
       </Swiper>
 
-      <div className="hidden justify-end gap-6 mt-6 md:flex">
+      <div className="mt-6 hidden justify-end gap-6 md:flex">
         {buttons.map(({ el, Icon }) => (
           <Button key={el} className={el} variant="secondary" size="icon">
             <Icon />

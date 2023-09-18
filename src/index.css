@@ -70,9 +70,9 @@
 
 @layer base {
   * {
-    @apply border-border scroll-none scroll-smooth;
+    @apply scroll-smooth border-border scroll-none;
   }
   body {
-    @apply bg-background text-foreground font-DMSans overflow-x-hidden selection:bg-muted;
+    @apply overflow-x-hidden bg-background font-DMSans text-foreground selection:bg-muted;
   }
 }

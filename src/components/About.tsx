@@ -2,12 +2,12 @@ import { Heading, Paragraph } from "."
 
 const About = () => {
   return (
-    <div className="relative text-muted-foreground flex flex-col my-6 md:my-12">
+    <div className="relative my-6 flex flex-col text-muted-foreground md:my-12">
       <div className="grid gap-6">
         <div>
           <Heading
             typeStyle="heading-2xl"
-            className="uppercase text-foreground mb-4"
+            className="mb-4 uppercase text-foreground"
           >
             Adesida Adeleye Alexander
           </Heading>
