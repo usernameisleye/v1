@@ -46,7 +46,7 @@ function App() {
       <main id="main-content" className="mx-auto max-w-7xl">
         <Navbar />
         <div className="container relative">
-          <header className="my-16">
+          <header className="my-8 md:my-16">
             <div>
               <Heading typeStyle="heading-4xl">
                 Hi,{" "}

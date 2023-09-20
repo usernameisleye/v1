@@ -1,4 +1,5 @@
 import { ProjectType } from "@/types"
+import { Globe } from "lucide-react"
 import { GitHub, Heading, Paragraph, TextLink } from "."
 
 const Project = ({ project }: { project: ProjectType }) => {
@@ -27,11 +28,19 @@ const Project = ({ project }: { project: ProjectType }) => {
           </div>
         </TextLink>
 
-        <div className="ml-auto mt-4">
+        <div className="ml-auto mt-4 flex gap-4 lg:block lg:gap-0">
+          {link && (
+            <TextLink href={link} className="flex items-center gap-2 lg:hidden">
+              <Globe />
+            </TextLink>
+          )}
+          {/* ------- */}
           {gitHub && (
             <TextLink href={gitHub} className="git flex items-center gap-2">
               <GitHub className="w-6" />
-              <span className="text-xs underline">View on GitHub</span>
+              <span className="hidden text-xs underline lg:block">
+                View on GitHub
+              </span>
             </TextLink>
           )}
         </div>

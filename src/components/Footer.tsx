@@ -1,6 +1,6 @@
 import { Clock2, Navigation } from "lucide-react"
 import { useEffect, useState } from "react"
-import { GitHub, Heading, LinkedIn, Paragraph, TextLink, Twitter } from "."
+import { AtSign, Heading, LinkedIn, Paragraph, TextLink, Twitter } from "."
 
 const Footer = () => {
   const [time, setTime] = useState(new Date())
@@ -12,9 +12,9 @@ const Footer = () => {
 
   const links = [
     {
-      href: "https://github.com/usernameisleye",
-      Icon: GitHub,
-      title: "GitHub",
+      href: "mailto:adeleyeadesida@gmail.com",
+      Icon: AtSign,
+      title: "Email",
     },
     {
       href: "https://twitter.com/usernameisleye",
@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="flex flex-wrap items-center justify-end gap-8 text-xs md:gap-4">
           <div className="flex select-none items-center gap-2 hover:text-foreground">
-            <span className="font-mono tracking-wider">
+            <time className="font-mono tracking-wider">
               {time.toLocaleTimeString("en-US", {
                 timeZone: "Africa/Lagos",
                 hour: "numeric",
@@ -65,7 +65,7 @@ const Footer = () => {
                 second: "numeric",
                 hour12: true,
               })}
-            </span>
+            </time>
             <Clock2 size={15} />
           </div>
 

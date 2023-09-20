@@ -2,7 +2,7 @@ import About from "./About"
 import Cursor from "./Cursor"
 import Footer from "./Footer"
 import Heading from "./Heading"
-import { Alien, GitHub, Leye, LinkedIn, Twitter } from "./Icons"
+import { Alien, AtSign, GitHub, Leye, LinkedIn, Twitter } from "./Icons"
 import Navbar from "./Navbar"
 import Paragraph from "./Paragraph"
 import Preloader from "./Preloader"
@@ -16,6 +16,7 @@ import { Button } from "./ui/Button"
 export {
   About,
   Alien,
+  AtSign,
   Button,
   Cursor,
   Footer,

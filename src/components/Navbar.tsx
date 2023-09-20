@@ -1,4 +1,4 @@
-import { Link2 } from "lucide-react"
+import { Link } from "lucide-react"
 import { GitHub, LinkedIn, TextLink, Theme, Twitter } from "."
 import {
   Menubar,
@@ -71,10 +71,10 @@ const LinksMenu = () => {
       <MenubarMenu>
         <MenubarTrigger className="cursor-pointer">
           <div className="block py-1 md:hidden">
-            <Link2 />
+            <Link size={18} />
           </div>
           <div className="hidden items-center gap-2 p-1 md:flex">
-            <Link2 size={15} />
+            <Link size={18} />
             <span>Links</span>
           </div>
         </MenubarTrigger>
