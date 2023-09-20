@@ -10,6 +10,7 @@ export const technologies = [
   "NodeJS",
   "Express",
   "mySQL",
+  "Sanity IO",
   "MongoDB",
 ]
 
@@ -17,6 +18,7 @@ export const familiars = [
   "GraphQL",
   "SvelteKit",
   "Redis",
+  "Prisma",
   "Redux",
   "Version Control",
 ]
