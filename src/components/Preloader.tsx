@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const Preloader = () => {
-  const [text, setText] = useState<string>("LOADING")
+  // const [text, setText] = useState<string>("LOADING")
   const [progress, setProgress] = useState<number>(0)
   const [visible, setVisible] = useState<boolean>(true)
 
@@ -15,31 +15,30 @@ const Preloader = () => {
       })
     }, 50)
 
-    const animate = setInterval(() => {
-      setText((current) => {
-        if (current === "LOADING...") return "LOADING"
-        else return current + "."
-      })
-    }, 500)
+    // const animate = setInterval(() => {
+    //   setText((current) => {
+    //     if (current === "LOADING...") return "LOADING"
+    //     else return current + "."
+    //   })
+    // }, 500)
 
     return () => {
       clearTimeout(timeout)
-      clearInterval(animate)
+      // clearInterval(animate)
     }
   }, [])
 
+  const percentage = String(progress).padStart(3, "0") + "%"
+
   return (
     <div
-      className={`fixed inset-0 flex items-end justify-end bg-secondary transition duration-200 ease-out ${
+      className={`fixed inset-0 flex items-center justify-center bg-secondary transition duration-500 ease-out ${
         visible
           ? "z-[9999] transform opacity-100"
           : "-z-[9999] transform opacity-0"
       }`}
     >
-      <div className="grid gap-3 p-8 text-right font-Grotesk text-5xl text-muted-foreground md:text-7xl">
-        <h2>{text}</h2>
-        <h2>{`${progress}%`}</h2>
-      </div>
+      <h2 className="text-lg text-muted-foreground">{percentage}</h2>
     </div>
   )
 }

@@ -73,7 +73,7 @@ const LinksMenu = () => {
           <div className="block py-1 md:hidden">
             <Link size={18} />
           </div>
-          <div className="hidden items-center gap-2 p-1 md:flex">
+          <div className="hidden items-center gap-2 p-0.5 md:flex">
             <Link size={18} />
             <span>Links</span>
           </div>
