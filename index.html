@@ -5,6 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/leye.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adesida Leye | Solidified Full Stack Developer</title>
+
+    <script type="module">
+      const userTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches
+      const theme = localStorage.getItem("class")
+
+      theme
+        ? document.documentElement.setAttribute("class", theme)
+        : localStorage.setItem("class", userTheme ? "dark" : "light")
+    </script>
   </head>
   <body>
     <div id="root"></div>
